@@ -50,4 +50,8 @@ public class CharakterenController {
     public List<Charakteren>filterCharakterNachDorf(String dorf) {
         return charakterenService.filterCharaktereNachDorf(dorf);
     }
+
+    public List<Charakteren> filterCharakterbyDorf(Integer id, String dorf){
+        return charakterenService.filterCharakterbyProdukt(id,dorf);
+    }
 }
