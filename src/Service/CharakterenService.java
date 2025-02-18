@@ -4,6 +4,7 @@ import Model.Charakteren;
 import Repository.CharakterenRepository;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CharakterenService {
 
@@ -33,4 +34,9 @@ public class CharakterenService {
     public List<Charakteren> getAllCharakteren() {
         return charakterenRepository.getAllCharakteren();
     }
+
+    public List<Charakteren>filterCharaktereNachDorf(String dorf) {
+        return getAllCharakteren().stream().filter(charakter -> charakter.getDorf().equalsIgnoreCase(dorf)).collect(Collectors.toList());
+    }
+
 }

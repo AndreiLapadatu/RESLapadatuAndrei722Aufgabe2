@@ -46,4 +46,8 @@ public class CharakterenController {
             charakterenService.updateCharakter(charakteren);
         }
     }
+
+    public List<Charakteren>filterCharakterNachDorf(String dorf) {
+        return charakterenService.filterCharaktereNachDorf(dorf);
+    }
 }
