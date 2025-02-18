@@ -2,21 +2,21 @@ package Model;
 
 public class Produkten {
 
-    private int name;
+    private String name;
     private int price;
     private String region;
 
-    public Produkten(int name, int price, String region) {
+    public Produkten(String name, int price, String region) {
         this.name = name;
         this.price = price;
         this.region = region;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
