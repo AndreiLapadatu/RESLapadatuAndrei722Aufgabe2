@@ -31,6 +31,6 @@ public class CharakterenService {
     }
 
     public List<Charakteren> getAllCharakteren() {
-        return patientenRepository.getAllPatienten();
+        return charakterenRepository.getAllCharakteren();
     }
 }
