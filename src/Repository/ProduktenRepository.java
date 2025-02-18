@@ -10,7 +10,7 @@ public class ProduktenRepository {
     private List<Produkten> produkten = new ArrayList<>();
 
 
-    public void addProdukt(Produkten produkt) {
+    public void add(Produkten produkt) {
             produkten.add(produkt);
     }
 
