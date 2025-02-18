@@ -36,10 +36,18 @@ public class CharakterenService {
         return charakterenRepository.getAllCharakteren();
     }
 
+
+
+    /**
+     * filtering charakter by Dorf.
+     */
     public List<Charakteren>filterCharaktereNachDorf(String dorf) {
         return getAllCharakteren().stream().filter(charakter -> charakter.getDorf().equalsIgnoreCase(dorf)).collect(Collectors.toList());
     }
 
+    /**
+     * showing charakter and produkt by region.
+     */
     public List<Charakteren> filterCharakterbyProdukt(Integer id,String dorf) {
         return getAllCharakteren().stream().filter(charakter -> charakter.getProduktenList().stream().anyMatch(k ->k.getRegion().equalsIgnoreCase(dorf)))
                 .collect(Collectors.toList());
